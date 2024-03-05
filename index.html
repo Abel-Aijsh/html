@@ -1,18 +1,52 @@
 <html>
+
 <head>
-<title>my first time coding html</title>
+    <title>my first time coding html</title>
+    <style>
+        body {
+            background-color: green;
+            color: black;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        #dark-mode-toggle {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #dark-mode-toggle:focus {
+            outline: none;
+        }
+        
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
+
 <body bgcolor=green>
-<h1 align=center> HTML </h1>
-<hr>
-<b>Html</b> is a computer language used to code websites like google.com, wikipedia.com, etc .<br>
-full form of html is :<b><i><u> Hyper Text Markup language</u></i></b><br>
-the basic script of html are as below 👇<br>
-<img src=1.png height=200 width=300 align=left><br><br><br><br><br><br><br><br><br><br><br><br>
-It is very easy to code. <br>
-eg:This script of the website you are viewing is below. <br>
-<img src=2.png height=300 width=900 align=left><br><br><br><br><br><br><br><br><br><br><br><br>
-Made possibly <i><u>Abel Ajish</u></i><br>
-<h4 align=left><i><u>Thank you</u></i></h4>
+    <h1 align=center> HTML </h1>
+    <hr>
+    <b>Html</b> is a computer language used to code websites like google.com, wikipedia.com, etc .<br> full form of html is :<b><i><u> Hyper Text Markup language</u></i></b><br> the basic script of html are as below 👇<br>
+    <img src=1.png height=200 width=300 align=left><br><br><br><br><br><br><br><br><br><br><br><br> It is very easy to code. <br> eg:This script of the website you are viewing is below. <br>
+    <img src=2.png height=300 width=900 align=left><br><br><br><br><br><br><br><br><br><br><br><br> Made possibly <i><u>Abel Ajish</u></i><br>
+    <h4 align=left><i><u>Thank you</u></i></h4>
+    <button id="dark-mode-toggle">Dark mode</button>
+    <script>
+        const toggleButton = document.querySelector('#dark-mode-toggle');
+        const body = document.querySelector('body');
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
+
 </html>
